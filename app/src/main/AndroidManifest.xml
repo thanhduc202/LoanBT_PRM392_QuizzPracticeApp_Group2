@@ -18,7 +18,7 @@
         <activity android:name=".QuizOptionActivity" />
         <activity android:name=".RegisterActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".data.LoginActivity"
             android:theme="@style/splashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
