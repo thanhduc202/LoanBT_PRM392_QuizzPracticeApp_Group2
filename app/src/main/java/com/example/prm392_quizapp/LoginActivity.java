@@ -1,4 +1,4 @@
-package com.example.prm392_quizapp.data;
+package com.example.prm392_quizapp;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -12,9 +12,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import com.example.prm392_quizapp.MainActivity;
-import com.example.prm392_quizapp.R;
-import com.example.prm392_quizapp.RegisterActivity;
+import com.example.prm392_quizapp.data.User;
+import com.example.prm392_quizapp.data.UserDatabase;
+import com.example.prm392_quizapp.data.UserDatabaseClient;
 import com.example.prm392_quizapp.other.SharedPref;
 
 import java.util.ArrayList;
