@@ -106,9 +106,11 @@
         android:id="@+id/btnLogin"
         style="@style/btnStyle"
         android:layout_width="0dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="36dp"
         android:text="@string/login"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="478dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
