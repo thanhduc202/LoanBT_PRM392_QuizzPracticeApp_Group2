@@ -46,7 +46,7 @@
     </style>
 
     <style name="btnStyle" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundTint">@color/peach</item>
+        <item name="backgroundTint">@color/blue_med</item>
         <item name="cornerRadius">@dimen/btn_radius</item>
         <item name="android:layout_height">@dimen/btn_height</item>
     </style>
