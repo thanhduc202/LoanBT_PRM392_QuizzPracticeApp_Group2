@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizForFun">
+        <activity
+            android:name=".SubjectManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectSubjectActivity"
+            android:exported="false" />
         <activity android:name=".GeographyOrLiteratureQuizActivity"></activity>
         <activity android:name=".FinalResultActivity" />
         <activity android:name=".MathQuizActivity" />

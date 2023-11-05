@@ -24,7 +24,12 @@
     <string name="rule">Rule</string>
     <string name="history">History</string>
     <string name="menu">MENU</string>
-    <string name="quiz_option">Quiz Option</string>
+    <string name="quiz_option">Quiz Subject</string>
+    <string name="subject_management">Subject Management</string>
+    <string name="add_new_subject">Add New Subject</string>
+    <string name="save">Save</string>
+
+    <string name="questions">Questions</string>
     <string name="edit_password">Edit Password</string>
     <string name="logout">Logout</string>
     <string name="new_password">New Password</string>

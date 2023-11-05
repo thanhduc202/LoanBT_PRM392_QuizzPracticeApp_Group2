@@ -1,4 +1,4 @@
-package com.example.prm392_quizapp.data;
+package com.example.prm392_quizapp.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -7,6 +7,9 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Transaction;
 import androidx.room.Update;
+
+import com.example.prm392_quizapp.data.Attempt;
+import com.example.prm392_quizapp.data.User;
 
 import java.util.List;
 
