@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         CardView cvHistory = findViewById(R.id.cvHistory);
         CardView cvEditPassword = findViewById(R.id.cvEditPassword);
         CardView cvLogout = findViewById(R.id.cvLogout);
-
+        CardView cvSubjectManager = findViewById(R.id.cvSubjectManager);
+        CardView cvQuizmanager = findViewById(R.id.cvQuizmanager);
         SharedPref sharedPref = SharedPref.getInstance();
         User user = sharedPref.getUser(this);
         tvUsername.setText("Hello, " + user.getUsername());
@@ -55,7 +56,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,EditPasswordActivity.class));
             }
         });
-
+        cvSubjectManager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, SubjectManagementActivity.class));
+            }
+        });
+        cvQuizmanager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, QuizManagementActivity.class));
+            }
+        });
         cvLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
