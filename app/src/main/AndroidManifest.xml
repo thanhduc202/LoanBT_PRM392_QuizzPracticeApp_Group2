@@ -10,12 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizForFun">
         <activity
+            android:name=".QuizManagementActivity"
+            android:exported="false" />
+        <activity
             android:name=".SubjectManagementActivity"
             android:exported="false" />
         <activity
             android:name=".SelectSubjectActivity"
             android:exported="false" />
-        <activity android:name=".GeographyOrLiteratureQuizActivity"></activity>
+        <activity android:name=".GeographyOrLiteratureQuizActivity" />
         <activity android:name=".FinalResultActivity" />
         <activity android:name=".MathQuizActivity" />
         <activity android:name=".EditPasswordActivity" />
@@ -34,6 +37,5 @@
         </activity>
         <activity android:name=".MainActivity" />
     </application>
-
 
 </manifest>

@@ -31,6 +31,13 @@ public interface QuizDao {
     @Transaction
     @Query("SELECT * FROM quiz WHERE SubjectID = :SubjectID")
     List<Quiz> getQuizBySubject(int SubjectID);
+
+    @Transaction
+    @Query("SELECT * FROM quiz")
+    List<QuizWithSubject> getAllQuizWithSubject();
+    @Transaction
+    @Query("SELECT * FROM quiz WHERE SubjectID = :SubjectID")
+    List<QuizWithSubject> getQuizBySubjectWithSubject(int SubjectID);
     @Transaction
     @Query("SELECT * FROM quiz WHERE QuizID = :QuizID")
     QuizWithSubject getQuiz(int QuizID);

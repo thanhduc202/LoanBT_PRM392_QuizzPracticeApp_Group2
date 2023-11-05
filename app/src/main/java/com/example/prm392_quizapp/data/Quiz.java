@@ -18,38 +18,29 @@ import androidx.room.PrimaryKey;
         )
 )
 public class Quiz implements Parcelable {
-
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "QuizID")
     private int QuizID;
-
     @NonNull
     @ColumnInfo(name = "Question")
     private String Question;
-
     @NonNull
     @ColumnInfo(name = "Answer1")
     private String Answer1;
-
     @NonNull
     @ColumnInfo(name = "Answer2")
     private String Answer2;
-
     @NonNull
     @ColumnInfo(name = "Answer3")
     private String Answer3;
-
     @NonNull
     @ColumnInfo(name = "Answer4")
     private String Answer4;
-
     @NonNull
     @ColumnInfo(name = "CorrectAnswer")
     private String CorrectAnswer;
-
     @ColumnInfo(name = "SubjectID")
     private int SubjectID;
-
     public Quiz(@NonNull String question, @NonNull String answer1, @NonNull String answer2, @NonNull String answer3, @NonNull String answer4, @NonNull String correctAnswer, int subjectID) {
         Question = question;
         Answer1 = answer1;
@@ -59,81 +50,62 @@ public class Quiz implements Parcelable {
         CorrectAnswer = correctAnswer;
         SubjectID = subjectID;
     }
-
     public Quiz(){}
-
     public int getQuizID() {
         return QuizID;
     }
-
     @NonNull
     public String getQuestion() {
         return Question;
     }
-
     @NonNull
     public String getAnswer1() {
         return Answer1;
     }
-
     @NonNull
     public String getAnswer2() {
         return Answer2;
     }
-
     @NonNull
     public String getAnswer3() {
         return Answer3;
     }
-
     @NonNull
     public String getAnswer4() {
         return Answer4;
     }
-
     @NonNull
     public String getCorrectAnswer() {
         return CorrectAnswer;
     }
-
     public int getSubjectID() {
         return SubjectID;
     }
-
     public void setQuizID(int quizID) {
         QuizID = quizID;
     }
-
     public void setQuestion(@NonNull String question) {
         Question = question;
     }
-
     public void setAnswer1(@NonNull String answer1) {
         Answer1 = answer1;
     }
-
     public void setAnswer2(@NonNull String answer2) {
         Answer2 = answer2;
     }
-
     public void setAnswer3(@NonNull String answer3) {
         Answer3 = answer3;
     }
-
     public void setAnswer4(@NonNull String answer4) {
         Answer4 = answer4;
     }
-
     public void setCorrectAnswer(@NonNull String correctAnswer) {
         CorrectAnswer = correctAnswer;
     }
-
     public void setSubjectID(int subjectID) {
         SubjectID = subjectID;
     }
-
     public  static Creator<Quiz> getCreator(){return CREATOR; }
-
     protected Quiz(Parcel in) {
         QuizID = in.readInt();
         Question = in.readString();
@@ -144,7 +116,6 @@ public class Quiz implements Parcelable {
         CorrectAnswer = in.readString();
         SubjectID = in.readInt();
     }
-
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(QuizID);
@@ -167,11 +138,8 @@ public class Quiz implements Parcelable {
             return new Quiz[size];
         }
     };
-
     @Override
     public int describeContents() {
         return 0;
     }
-
-
 }

@@ -26,8 +26,12 @@
     <string name="menu">MENU</string>
     <string name="quiz_option">Quiz Subject</string>
     <string name="subject_management">Subject Management</string>
+    <string name="quiz_management">Quiz Management</string>
     <string name="add_new_subject">Add New Subject</string>
     <string name="save">Save</string>
+    <string name="new_quiz">Create New Quiz</string>
+    <string name="correct_answer">Correct Answer</string>
+    <string name="subject_1">Subject</string>
 
     <string name="questions">Questions</string>
     <string name="edit_password">Edit Password</string>
