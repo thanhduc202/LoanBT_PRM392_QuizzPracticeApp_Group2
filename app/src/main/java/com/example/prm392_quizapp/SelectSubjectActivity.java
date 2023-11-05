@@ -64,6 +64,7 @@ public class SelectSubjectActivity extends AppCompatActivity {
                 Intent intent = new Intent(SelectSubjectActivity.this, QuizActivity.class);
                 intent.putExtra(Constants.SUBJECT, subject);
                 startActivity(intent);
+                finish();
             });
 
             rvSelectedSubject.setAdapter(adapter);

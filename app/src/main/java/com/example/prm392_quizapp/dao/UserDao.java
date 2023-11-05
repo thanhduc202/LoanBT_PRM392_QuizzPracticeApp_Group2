@@ -39,4 +39,6 @@ public interface UserDao {
     @Query("SELECT SUM(earned) FROM attempt WHERE email = :email")
     int getOverAllPoints(String email);
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void saveAttempt(Attempt attempt);
 }

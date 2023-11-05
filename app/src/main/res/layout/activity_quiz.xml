@@ -113,7 +113,7 @@ last name of Hitler?" />
             </RadioGroup>
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/current_quiz"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"

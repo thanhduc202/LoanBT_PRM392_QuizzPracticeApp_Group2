@@ -22,7 +22,7 @@ import java.util.List;
 
 public class QuizActivity extends AppCompatActivity {
 
-    TextView Title, tvQuestion;
+    TextView Title, tvQuestion, tvTotal;
 
     private Button btnNext;
 
@@ -35,6 +35,7 @@ public class QuizActivity extends AppCompatActivity {
 
     Subject subject;
     private Quiz quiz;
+
 
     @SuppressLint("StaticFieldLeak")
     @Override
@@ -68,6 +69,7 @@ public class QuizActivity extends AppCompatActivity {
                     radioButton3 = findViewById(R.id.radioButton3);
                     radioButton4 = findViewById(R.id.radioButton4);
                     btnNext = findViewById(R.id.btnNextQuestion);
+                    tvTotal = findViewById(R.id.current_quiz);
 
                     Title.setText(subject.getSubjectName());
 
@@ -94,7 +96,6 @@ public class QuizActivity extends AppCompatActivity {
                             startActivity(intentResult);
                             finish();
                         }
-
                     });
 
                     if(quizList.size()==0){
@@ -119,11 +120,8 @@ public class QuizActivity extends AppCompatActivity {
             radioButton2.setText(quiz.getAnswer2());
             radioButton3.setText(quiz.getAnswer3());
             radioButton4.setText(quiz.getAnswer4());
-            radioButton1.setChecked(false);
-            radioButton2.setChecked(false);
-            radioButton3.setChecked(false);
-            radioButton4.setChecked(false);
-            currentQuiz++;
+            radioGroup.clearCheck();
+            tvTotal.setText("Current Quiz: "+ (++currentQuiz));
         if (currentQuiz == Constants.QUESTION_SHOWING  - 1 || currentQuiz >= quizList.size()){
             btnNext.setText(getText(R.string.finish));
         }

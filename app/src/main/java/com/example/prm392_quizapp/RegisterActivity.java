@@ -114,7 +114,6 @@ public class RegisterActivity extends AppCompatActivity {
             }catch (SQLiteConstraintException e){
                 isOkay =false;
             }
-
             return null;
         }
 
