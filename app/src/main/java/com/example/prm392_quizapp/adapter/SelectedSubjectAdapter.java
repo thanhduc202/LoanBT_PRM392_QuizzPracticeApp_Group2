@@ -27,6 +27,17 @@ public class SelectedSubjectAdapter extends RecyclerView.Adapter<SelectedSubject
         this.subjectDao = subjectDao;
     }
 
+    public interface OnClickListener {
+        void onClick(Subject subject);
+    }
+    // Trong Adapter, khai báo một instance của interface
+    private OnClickListener onClickListener;
+
+    // Thêm một phương thức để thiết lập listener
+    public void setOnClickListener(OnClickListener listener) {
+        this.onClickListener = listener;
+    }
+
     @NonNull
     @Override
     public SelectedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -59,6 +70,9 @@ public class SelectedSubjectAdapter extends RecyclerView.Adapter<SelectedSubject
             @Override
             public void onClick(View view) {
                 // DO NOTHING
+                if (onClickListener != null) {
+                    onClickListener.onClick(subject);
+                }
             }
         });
     }

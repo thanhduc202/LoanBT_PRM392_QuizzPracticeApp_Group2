@@ -32,7 +32,7 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_geography_or_literature_quiz);
+        /*setContentView(R.layout.activity_quiz);
 
         Intent intent = getIntent();
         String subject = intent.getStringExtra(Constants.SUBJECT);
@@ -94,7 +94,7 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
             }
         });
 
-        displayData();
+        displayData();*/
     }
 
     private void displayNextQuestions() {

@@ -1,8 +1,10 @@
 package com.example.prm392_quizapp;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,6 +13,7 @@ import com.example.prm392_quizapp.adapter.SelectedSubjectAdapter;
 import com.example.prm392_quizapp.data.Subject;
 import com.example.prm392_quizapp.data.UserDatabase;
 import com.example.prm392_quizapp.data.UserDatabaseClient;
+import com.example.prm392_quizapp.other.Constants;
 
 import java.util.ArrayList;
 
@@ -56,6 +59,13 @@ public class SelectSubjectActivity extends AppCompatActivity {
             super.onPostExecute(aVoid);
             UserDatabase databaseClient = UserDatabaseClient.getInstance(getApplicationContext());
             SelectedSubjectAdapter adapter = new SelectedSubjectAdapter(subjects, databaseClient.subjectDao());
+
+            adapter.setOnClickListener(subject -> {
+                Intent intent = new Intent(SelectSubjectActivity.this, QuizActivity.class);
+                intent.putExtra(Constants.SUBJECT, subject);
+                startActivity(intent);
+            });
+
             rvSelectedSubject.setAdapter(adapter);
         }
     }
